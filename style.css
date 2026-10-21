@@ -1,0 +1,51 @@
+
+body {
+    background: #f7f6f1;
+    color: #303c35;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    font-size: 38px;
+}
+
+.brand {
+    color: #688875;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.form-box {
+    background: #e7eee5;
+}
+
+.records-box {
+    background: white;
+    border: 1px solid #e8e7df;
+}
+
+.count-box {
+    background: #f5e9dc;
+}
+
+.count-box span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-success {
+    background: #496c58;
+    border-color: #496c58;
+}
+
+.btn-success:hover {
+    background: #304c3b;
+    border-color: #304c3b;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-3 p-md-5">
+
+    <header class="border-bottom pb-4 mb-4">
+        <p class="brand">STUDENT MANAGEMRNT FORM</p>
+        <h1>Every Student Counts</h1>
+        <p class="text-secondary">A simple place to manage your student records.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="form-box p-4 rounded-3 mb-4">
+            <h2>New Student</h2>
+            <p class="text-secondary">Enter student information below.</p>
+
+            <form onsubmit="addStudent(event)" class="row g-3">
+                <!--form-->
+                <div class="col-md-4">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Student name" required>
+                </div>
+
+                <div class="col-md-2">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" id="age" class="form-control" placeholder="Age" min="1" required>
+                </div>
+                <!--courses-->
+                <div class="col-md-4">
+                    <label for="course" class="form-label">Course</label>
+                    <select id="course" class="form-select" required>
+                        <option value="">Select Course</option>
+                        <option>Information Technology</option>
+                        <option>Computer Science</option>
+                        <option>Software Engineering</option>
+                        <option>Artificial Intelligence</option>
+                        <option>Cyber Security</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="submit" id="submitBtn" class="btn btn-success w-100">
+                        Add Student
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="records-box p-3 p-md-4 rounded-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <p class="brand mb-1">Your record</p>
+                    <h2>Student List</h2>
+                </div>
+
+                <div class="count-box text-center rounded-3 px-3 py-2">
+                    <span id="totalStudents">0</span>
+                    <p class="mb-0 small">Students</p>
+                </div>
+            </div>
+            <!--table-->
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentList"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
