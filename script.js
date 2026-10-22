@@ -3,7 +3,7 @@ var students = [];
 var edit = -1;
 
 function addStudent(e) {
-    e.prevenFtDefault();
+    e.preventDefault();
     var student = {
         name: document.getElementById("name").value,
         age: document.getElementById("age").value,
