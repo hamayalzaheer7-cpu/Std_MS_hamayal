@@ -1,9 +1,7 @@
-
 var students = [];
 var edit = -1;
 
 function addStudent(e) {
-    e.preventDefault();
     var student = {
         name: document.getElementById("name").value,
         age: document.getElementById("age").value,
@@ -55,7 +53,6 @@ function editStudent(i) {
     document.getElementById("age").value = s.age;
     document.getElementById("course").value = s.course;
 
-    // Save the selected student's index
     edit = i;
 
     document.getElementById("submitBtn").innerText = "Update Student";
